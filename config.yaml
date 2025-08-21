@@ -3,7 +3,7 @@
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
 # 机场订阅
 proxy-providers:
-  机场名称:
+  机场名称1:
     url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
     type: http
     interval: 86400
@@ -12,7 +12,20 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 直连
-
+    override:
+      additional-prefix: "名称1"
+  #机场名称2:
+    #url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
+    #type: http
+    #interval: 86400
+    #health-check:
+      #enable: true
+      #url: https://www.gstatic.com/generate_204
+      #interval: 300
+    #proxy: 直连
+    #override:
+      #additional-prefix: "名称2"
+      
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
@@ -126,6 +139,7 @@ proxy-groups:
   - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$" }
   - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🎵 TikTok, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(港|HK|(?i)Hon)).)*$"}
   - {name: 🌐 全部节点, type: select, include-all: true}
 
 # 规则匹配
