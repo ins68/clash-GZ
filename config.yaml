@@ -1,10 +1,10 @@
 # 必读！！！
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
-# 机场订阅
+# 机场订阅,两端引号不要去掉,<>里改成自己的（含<>）
 proxy-providers:
-  机场名称1:
-    url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
+  <机场名称1>:
+    url: "<机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！>"
     type: http
     interval: 86400
     health-check:
@@ -13,9 +13,11 @@ proxy-providers:
       interval: 300
     proxy: 直连
     override:
-      additional-prefix: "名称1"
-  #机场名称2:
-    #url: "机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！"
+      additional-prefix: "<名称1>"
+      
+#proxy-providers:
+  #<机场名称2>:
+    #url: "<机场订阅填到这里，两端引号不要去掉，不要填写到下方链接里去！！>"
     #type: http
     #interval: 86400
     #health-check:
@@ -24,7 +26,7 @@ proxy-providers:
       #interval: 300
     #proxy: 直连
     #override:
-      #additional-prefix: "名称2"
+      #additional-prefix: "<名称2>"
       
 # 节点信息
 proxies:
